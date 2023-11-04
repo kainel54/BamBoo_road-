@@ -5,52 +5,54 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     private Rigidbody _rigid;
-    private CharacterController _characterController;
-    float _moveSpeed = 5f;
-    float _gravity = -9.8f;
-    float _yVelocity = 0f;
-    float _jumpPower = 5f;
+    [SerializeField] Transform _mainCam;
+    [SerializeField] float _speed = 5f;
+    [SerializeField] float _jumpPower = 10f;
+    [SerializeField] float _rotSpeed = 1f;
+    [SerializeField] LayerMask _layer;
+    bool _isGround;
 
-    [SerializeField] private LayerMask _layerMask;
-    private bool _isGround;
 
-    Vector3 _moveDir = Vector3.zero;
-
+    private Vector3 dir = Vector3.zero;
 
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        dir.x = Input.GetAxisRaw("Horizontal");
+        dir.z = Input.GetAxisRaw("Vertical");
+        dir = dir.normalized;
+
+        GroundCheak();
+    }
+
     private void FixedUpdate()
     {
-        MovementHandle();
-        Jump();
+        if (dir != Vector3.zero)
+            transform.forward = Vector3.Lerp(transform.forward, dir, _speed * Time.deltaTime);
+
+        _rigid.MovePosition(transform.position + dir * _speed * Time.deltaTime);
+
+        if(Input.GetButtonDown("Jump")&&_isGround)
+            _rigid.AddForce(Vector3.up*_jumpPower, ForceMode.Impulse);
     }
 
-    private void Jump()
+    private void GroundCheak()
     {
-        if (IsGround() && Input.GetKeyDown(KeyCode.Space))
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position + (Vector3.down * 1f), Vector3.down, out hit, 0.4f, _layer))
         {
-            Vector3 jumpUp = Vector3.up * _jumpPower;
-            _rigid.AddForce(jumpUp, ForceMode.VelocityChange);
+            _isGround = true;
         }
-    }
 
-    private void MovementHandle()
-    {
-        if (_characterController == null) return;
-        _moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        _moveDir = _characterController.transform.TransformDirection(_moveDir);
-        _moveDir *= _moveSpeed;
-    }
-
-
-    private bool IsGround()
-    {
-        _isGround = Physics.Raycast(transform.position, Vector3.down, 1.1f, _layerMask);
-        return _isGround;
+        else
+        {
+            _isGround= false;
+        }
     }
 }
