@@ -33,9 +33,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator PlusRoutine()
     {
-        scoreText.transform.DOScale(new Vector3(0.65f, 0.65f, 0.65f), 0.1f);
-        yield return new WaitForSeconds(0.2f);
-        scoreText.transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 0.1f);
+        scoreText.transform.DOScale(new Vector3(.65f, .65f, .65f), .1f);
+        yield return new WaitForSeconds(.2f);
+        scoreText.transform.DOScale(new Vector3(.5f, .5f, .5f), .1f);
 
     }
 }
