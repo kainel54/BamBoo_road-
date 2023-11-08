@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,8 +28,14 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = string.Format($"{score}");
+        StartCoroutine(PlusRoutine());
+    }
 
+    private IEnumerator PlusRoutine()
+    {
+        scoreText.transform.DOScale(new Vector3(0.65f, 0.65f, 0.65f), 0.1f);
+        yield return new WaitForSeconds(0.2f);
+        scoreText.transform.DOScale(new Vector3(0.5f, 0.5f, 0.5f), 0.1f);
 
-        
     }
 }
