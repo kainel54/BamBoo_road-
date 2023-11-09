@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         GroundCheak();
         PlayerMove();
         HitCheck();
+        Debug.Log(_isGround);
     }
 
     private void FixedUpdate()
