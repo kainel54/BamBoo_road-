@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask _jumpLayer;
     [SerializeField] LayerMask _dieLayer;
     bool _isGround;
-    [SerializeField] private Color _rayColer;
+        [SerializeField] private Color _rayColer;
     private float _maxDistance = 2f;
 
     private Vector3 _dir = Vector3.zero;
@@ -39,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigid.MovePosition(transform.position + _dir * _speed * Time.deltaTime);
+        _rigid.velocity = _dir * _speed;
 
-        if (Input.GetButtonDown("Jump") && _isGround)
-            _rigid.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
+        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
+        {
+            transform.position += new Vector3(0, Mathf.Lerp(0, 4, 3f), 0);
+        }
     }
 
     private void GroundCheak()
@@ -66,26 +68,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("hit");
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = _rayColer;
-
-        if (true == Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance,_dieLayer))
-        {
-            // Hit�� �������� ray�� �׷��ش�.
-            Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
-
-            // Hit�� ������ �ڽ��� �׷��ش�.
-            Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
-        }
-        else
-        {
-            // Hit�� ���� �ʾ����� �ִ� ���� �Ÿ��� ray�� �׷��ش�.
-            Gizmos.DrawRay(transform.position, transform.forward * _maxDistance);
-        }
-        
     }
 
     private void PlayerMove()
