@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         GroundCheak();
         PlayerMove();
         HitCheck();
+        Debug.Log(_isGround);
     }
 
     private void FixedUpdate()
@@ -73,15 +74,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (true == Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance,_dieLayer))
         {
-            // HitµÈ ÁöÁ¡±îÁö ray¸¦ ±×·ÁÁØ´Ù.
+            // Hitï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ rayï¿½ï¿½ ï¿½×·ï¿½ï¿½Ø´ï¿½.
             Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
 
-            // HitµÈ ÁöÁ¡¿¡ ¹Ú½º¸¦ ±×·ÁÁØ´Ù.
+            // Hitï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ø´ï¿½.
             Gizmos.DrawWireCube(transform.position + transform.forward * hit.distance, transform.lossyScale);
         }
         else
         {
-            // Hit°¡ µÇÁö ¾Ê¾ÒÀ¸¸é ÃÖ´ë °ËÃâ °Å¸®·Î ray¸¦ ±×·ÁÁØ´Ù.
+            // Hitï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ï¿½ï¿½ rayï¿½ï¿½ ï¿½×·ï¿½ï¿½Ø´ï¿½.
             Gizmos.DrawRay(transform.position, transform.forward * _maxDistance);
         }
         
