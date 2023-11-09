@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
     {
         Move();
         PlayerMoveScore();
+
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            GameManager.instance.GameOver();
+        }
     }
 
     private void Move()
@@ -38,4 +43,6 @@ public class Player : MonoBehaviour
             GameManager.instance.ScorePlus();
         }
     }
+
+
 }
