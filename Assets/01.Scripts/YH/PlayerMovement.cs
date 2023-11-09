@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         GroundCheak();
         PlayerMove();
+        HitCheck();
     }
 
     private void FixedUpdate()
@@ -55,6 +56,14 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _isGround = false;
+        }
+    }
+
+    private void HitCheck()
+    {
+        if(Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance, _dieLayer))
+        {
+            Debug.Log("hit");
         }
     }
 
@@ -83,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (_pos == _nextPos)
         {
             _nextPos += _pos;
-
+            GameManager.instance.ScorePlus();
         }
     }
     
