@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigid.velocity = _dir * _speed;
+        _rigid.velocity = _dir * _speed + Vector3.up * _rigid.velocity.y;
 
         if (Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
