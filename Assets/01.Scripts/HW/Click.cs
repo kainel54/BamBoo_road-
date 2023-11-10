@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,8 @@ public class Click : MonoBehaviour
     bool isOn;
     public void OnStart()
     {
-        SceneManager.LoadScene("Main");
-        
+        SceneManager.LoadScene(1);
+        Debug.Log("sfdafsf");
     }
 
     public void OnExplain()
@@ -28,6 +29,15 @@ public class Click : MonoBehaviour
         {
             ExpImg.transform.DOScale(new Vector3(0, 0, 0), .5f);
             isOn = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(1);
+            Debug.Log("sfdafsf");
         }
     }
 
