@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         _pos = _dir.z;
 
         GroundCheak();
-        PlayerMove();
+        //PlayerMove();
         HitCheck();
         Debug.Log(_isGround);
     }
@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
         if(Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward, out RaycastHit hit, transform.rotation, _maxDistance, _dieLayer))
         {
             GameManager.instance.GameOver();
-            Debug.Log("hit");
         }
     }
 

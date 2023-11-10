@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawntongnamu : MonoBehaviour
 {
-    public GameObject Tongnamu;
+    public GameObject[] Tongnamu;
     void Start()
     {
         SpawnTreed();
@@ -17,8 +17,10 @@ public class Spawntongnamu : MonoBehaviour
 
     IEnumerator SpawnTree()
     {
-        yield return new WaitForSeconds(1.5f);
-        Instantiate(Tongnamu);
-        SpawnTreed();
+        while (true)
+        {
+            Instantiate(Tongnamu[Random.Range(0, 4)], transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+            yield return new WaitForSeconds(7f);
+        }
     }
 }
