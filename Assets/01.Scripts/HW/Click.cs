@@ -3,32 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
+using TMPro;
 
 public class Click : MonoBehaviour
 {
-    [SerializeField] Image GearImg;
     [SerializeField] Image ExpImg;
+    bool isOn;
     public void OnStart()
     {
         SceneManager.LoadScene("Main");
+        
     }
 
     public void OnExplain()
     {
-        if(ExpImg.enabled)
+        
+        if (!isOn)
         {
-            ExpImg.enabled = false;
+            ExpImg.transform.DOScale(new Vector3(1, 1, 1), .5f);
+            isOn = true;
         }
-        GearImg.enabled = true;
-
+        else
+        {
+            ExpImg.transform.DOScale(new Vector3(0, 0, 0), .5f);
+            isOn = false;
+        }
     }
 
-    public void OnGear()
+    public void OnX()
     {
-        if(GearImg.enabled)
-        {
-            ExpImg.enabled = false;
-        }
-        ExpImg.enabled = true;
+        ExpImg.transform.DOScale(new Vector3(0, 0, 0), .5f);
+        isOn = false;
     }
 }
