@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2489781774450909518
+--- !u!1 &622565137120930608
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4181048577801822245}
-  - component: {fileID: 5555529010268685775}
-  - component: {fileID: 5076102066935363980}
-  m_Layer: 0
-  m_Name: plant_bamboo (4)
+  - component: {fileID: 8204073050040563117}
+  - component: {fileID: 5002745194954918537}
+  - component: {fileID: 7182669572099133102}
+  - component: {fileID: 3470740140312829834}
+  m_Layer: 7
+  m_Name: plant_bamboo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4181048577801822245
+--- !u!4 &8204073050040563117
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2489781774450909518}
+  m_GameObject: {fileID: 622565137120930608}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: 1, z: -0.9099999}
+  m_LocalPosition: {x: -5, y: 1, z: -0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4631237447173779766}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &5555529010268685775
+--- !u!33 &5002745194954918537
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2489781774450909518}
+  m_GameObject: {fileID: 622565137120930608}
   m_Mesh: {fileID: 2890697843993959315, guid: ebffb415734f6d440b5ecd0f0a7be21d, type: 3}
---- !u!23 &5076102066935363980
+--- !u!23 &7182669572099133102
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2489781774450909518}
+  m_GameObject: {fileID: 622565137120930608}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,7 +84,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4829756419187380213
+--- !u!136 &3470740140312829834
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622565137120930608}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33
+  m_Height: 10.64
+  m_Direction: 2
+  m_Center: {x: -0.00000035762787, y: 0.008075669, z: 5.0759635}
+--- !u!1 &4005073856687868955
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,46 +115,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8844668049349175437}
-  - component: {fileID: 2534083627132633110}
-  - component: {fileID: 8393221677541775527}
-  m_Layer: 0
-  m_Name: plant_bamboo (6)
+  - component: {fileID: 6360216889453941684}
+  - component: {fileID: 3952033418026309344}
+  - component: {fileID: 1003923705765453680}
+  - component: {fileID: 7068627361792969943}
+  m_Layer: 7
+  m_Name: plant_bamboo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8844668049349175437
+--- !u!4 &6360216889453941684
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4829756419187380213}
+  m_GameObject: {fileID: 4005073856687868955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: 1, z: 4.1100006}
+  m_LocalPosition: {x: -5, y: 1, z: 1.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4631237447173779766}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &2534083627132633110
+--- !u!33 &3952033418026309344
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4829756419187380213}
+  m_GameObject: {fileID: 4005073856687868955}
   m_Mesh: {fileID: 2890697843993959315, guid: ebffb415734f6d440b5ecd0f0a7be21d, type: 3}
---- !u!23 &8393221677541775527
+--- !u!23 &1003923705765453680
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4829756419187380213}
+  m_GameObject: {fileID: 4005073856687868955}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -166,6 +191,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7068627361792969943
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4005073856687868955}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33
+  m_Height: 10.64
+  m_Direction: 2
+  m_Center: {x: -0.00000035762787, y: 0.008075669, z: 5.0759635}
 --- !u!1 &4946156370074394367
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,10 +245,10 @@ Transform:
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5744344253747180204}
-  - {fileID: 4181048577801822245}
-  - {fileID: 8407096406068040739}
-  - {fileID: 8844668049349175437}
+  - {fileID: 6360216889453941684}
+  - {fileID: 7839515455922220532}
+  - {fileID: 8204073050040563117}
+  - {fileID: 2773991432862610170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6574522917425802876
@@ -237,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!1 &8895421778418704230
+--- !u!1 &5353376354187608902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,46 +293,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8407096406068040739}
-  - component: {fileID: 1166234870039376291}
-  - component: {fileID: 7344041898121674912}
-  m_Layer: 0
-  m_Name: plant_bamboo (5)
+  - component: {fileID: 2773991432862610170}
+  - component: {fileID: 6882213123171348186}
+  - component: {fileID: 7249704820561615124}
+  - component: {fileID: 7424391497520959678}
+  m_Layer: 7
+  m_Name: plant_bamboo (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8407096406068040739
+--- !u!4 &2773991432862610170
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8895421778418704230}
+  m_GameObject: {fileID: 5353376354187608902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: 1, z: 1.11}
+  m_LocalPosition: {x: -5, y: 1, z: -3.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4631237447173779766}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &1166234870039376291
+--- !u!33 &6882213123171348186
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8895421778418704230}
+  m_GameObject: {fileID: 5353376354187608902}
   m_Mesh: {fileID: 2890697843993959315, guid: ebffb415734f6d440b5ecd0f0a7be21d, type: 3}
---- !u!23 &7344041898121674912
+--- !u!23 &7249704820561615124
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8895421778418704230}
+  m_GameObject: {fileID: 5353376354187608902}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -320,7 +369,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9175445564083104765
+--- !u!136 &7424391497520959678
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353376354187608902}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33
+  m_Height: 10.64
+  m_Direction: 2
+  m_Center: {x: -0.00000035762787, y: 0.008075669, z: 5.0759635}
+--- !u!1 &8812200207421425465
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,46 +400,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5744344253747180204}
-  - component: {fileID: 3095690596150855698}
-  - component: {fileID: 122773889522647547}
-  m_Layer: 0
-  m_Name: plant_bamboo (3)
+  - component: {fileID: 7839515455922220532}
+  - component: {fileID: 3048433056597900361}
+  - component: {fileID: 290036512456730066}
+  - component: {fileID: 4276203020167335403}
+  m_Layer: 7
+  m_Name: plant_bamboo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5744344253747180204
+--- !u!4 &7839515455922220532
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9175445564083104765}
+  m_GameObject: {fileID: 8812200207421425465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: 1, z: -3.91}
+  m_LocalPosition: {x: -5, y: 1, z: 4.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4631237447173779766}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &3095690596150855698
+--- !u!33 &3048433056597900361
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9175445564083104765}
+  m_GameObject: {fileID: 8812200207421425465}
   m_Mesh: {fileID: 2890697843993959315, guid: ebffb415734f6d440b5ecd0f0a7be21d, type: 3}
---- !u!23 &122773889522647547
+--- !u!23 &290036512456730066
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9175445564083104765}
+  m_GameObject: {fileID: 8812200207421425465}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -403,3 +476,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4276203020167335403
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812200207421425465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33
+  m_Height: 10.64
+  m_Direction: 2
+  m_Center: {x: -0.00000035762787, y: 0.008075669, z: 5.0759635}

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI gvText;
+    //[SerializeField] TextMeshProUGUI gvText;
     private int score = 0;
     Color color =  new Color(241,71,73,255);
     private void Awake()
@@ -24,15 +24,16 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        /*scoreText.text = string.Format($"{score}");
-        scoreText.gameObject.SetActive(true);*/
+        scoreText.text = string.Format($"{score}");
+        scoreText.gameObject.SetActive(true);
+        StartCoroutine(sss());
     }
 
     public void ScorePlus()
     {
-        /*score++;
+        ++score;
         scoreText.text = string.Format($"{score}");
-        StartCoroutine(PlusRoutine());*/
+        StartCoroutine(PlusRoutine());
     }
 
     private IEnumerator PlusRoutine()
@@ -47,5 +48,14 @@ public class GameManager : MonoBehaviour
         /*gvText.gameObject.SetActive(true);
         gvText.DOFade(1, 3);*/
         SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator sss()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            ScorePlus();
+        }
     }
 }
