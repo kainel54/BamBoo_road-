@@ -48,14 +48,4 @@ public class GameManager : MonoBehaviour
         gvText.DOFade(1, 3);*/
         SceneManager.LoadScene(0);
     }
-
-    void Bounce()
-    {
-
-    }
-
-    void GameSet()
-    {
-
-    }
 }
