@@ -20,7 +20,7 @@ public class Spawntongnamu : MonoBehaviour
         while (true)
         {
             Instantiate(Tongnamu[Random.Range(0, 4)], transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(Random.Range(8, 12));
         }
     }
 }

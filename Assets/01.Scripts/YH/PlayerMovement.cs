@@ -32,27 +32,27 @@ public class PlayerMovement : MonoBehaviour
         _pos = _dir.z;
 
         GroundCheak();
-        //PlayerMove();
+        PlayerMove();
         HitCheck();
         Debug.Log(_isGround);
+        
+        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
+        {
+            transform.position += new Vector3(0, Mathf.Lerp(0, 6f,_jumpPower), 0);
+            //_rigid.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
+        }
     }
 
     private void FixedUpdate()
     {
         _rigid.velocity = _dir * _speed + Vector3.up * _rigid.velocity.y;
-
-        if (Input.GetKeyDown(KeyCode.Space) && _isGround)
-        {
-            //transform.position += new Vector3(0, Mathf.Lerp(0, 4, 3f), 0);
-            _rigid.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
-        }
     }
 
     private void GroundCheak()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position + (Vector3.down * 1f), Vector3.down, out hit, 0.4f, _jumpLayer))
+        if (Physics.Raycast(transform.position + (Vector3.down * 1f), Vector3.down, out hit, 0.6f, _jumpLayer))
         {
             _isGround = true;
         }
