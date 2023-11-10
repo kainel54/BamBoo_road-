@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,15 +24,15 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        scoreText.text = string.Format($"{score}");
-        scoreText.gameObject.SetActive(true);
+        /*scoreText.text = string.Format($"{score}");
+        scoreText.gameObject.SetActive(true);*/
     }
 
     public void ScorePlus()
     {
-        score++;
+        /*score++;
         scoreText.text = string.Format($"{score}");
-        StartCoroutine(PlusRoutine());
+        StartCoroutine(PlusRoutine());*/
     }
 
     private IEnumerator PlusRoutine()
@@ -43,8 +44,9 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        gvText.gameObject.SetActive(true);
-        gvText.DOFade(1, 3);
+        /*gvText.gameObject.SetActive(true);
+        gvText.DOFade(1, 3);*/
+        SceneManager.LoadScene(0);
     }
 
     void Bounce()
