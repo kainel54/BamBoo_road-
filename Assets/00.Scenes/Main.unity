@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -635,7 +634,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011860777}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2d07807a2a89cc04f96ff5bfe483394b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -916,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429801171922524525, guid: 205815a06d136604c8021c1cef8b2f8b, type: 3}
       propertyPath: _jumpPower
-      value: 7
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 8603955333544919764, guid: 205815a06d136604c8021c1cef8b2f8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -970,8 +969,7 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1090842381716440485, guid: 205815a06d136604c8021c1cef8b2f8b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

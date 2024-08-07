@@ -38,9 +38,13 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space) && _isGround)
         {
-            transform.position += new Vector3(0, Mathf.Lerp(0, 6f,_jumpPower), 0);
-            //_rigid.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
+            Jump();
         }
+    }
+
+    private void Jump()
+    {
+        _rigid.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
     }
 
     private void FixedUpdate()
